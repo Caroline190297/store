@@ -27,7 +27,7 @@ public class C extends Thread{
 			{
 				try
 				{
-					mutex.lock();
+					Main.semFull.acquire();
 					canConsume();
 				} catch (Exception e) {
 
@@ -36,7 +36,7 @@ public class C extends Thread{
 				
 				finally
 				{
-					mutex.unlock();
+					Main.semFull.release();
 				}
 
 			}

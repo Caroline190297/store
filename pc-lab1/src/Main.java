@@ -25,53 +25,6 @@ public class Main
 		
 		producer.join();
 		consumer.join();
-		
-     /*
-     final P p = new P();
-     final C c = new C();
 
-     Thread t1 = new Thread(new Runnable()
-     {
-         @Override
-         public void run()
-         {
-             try
-             {
-                 while (true) {
-                     p.produce();   
-                 }                 
-             }
-             catch(InterruptedException e)
-             {
-                 e.printStackTrace();
-             }
-         }
-     });
-
-     Thread t2 = new Thread(new Runnable()
-     {
-         @Override
-         public void run()
-         {
-             try
-             {
-                 while (true) {
-                     c.consume();   
-                 }
-             }
-             catch(InterruptedException e)
-             {
-                 e.printStackTrace();
-             }
-         }
-     });
-
-     t1.start();
-     t2.start();
-
-     // t1 finishes before t2
-     t1.join();
-     t2.join();
-     */
  }
 }

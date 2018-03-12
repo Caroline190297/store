@@ -25,20 +25,20 @@ public class P extends Thread{
 		{
 			try
 			{
-				mutex.lock();
+				Main.semFree.acquire();
 				canProduce();
 				
 			} catch (Exception e) {
-
-	            e.printStackTrace();
-	        } 
-			
+				e.printStackTrace();
+		    } 
+				
 			finally
 			{
-				mutex.unlock();
+				Main.semFull.release();
 			}
 
-		}
 		
+		
+		}
 	}
 }
